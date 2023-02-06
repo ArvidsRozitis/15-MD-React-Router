@@ -15,8 +15,6 @@ export const Character = () => {
   if (status === "error") return <p>Error </p>;
 
   return (
-    // <h1>{data.name}</h1>
-
     <div className={style.card}>
       <img src={data.image} alt="character picture" className={style.picture} />
       <div className={style.informationWrapper}>

@@ -20,7 +20,6 @@ export const CharacterCard = ({
   episode,
   id,
 }: CharacterCardProps) => {
- 
   return (
     <div className={style.card}>
       <img src={image} alt="character picture" className={style.picture} />
@@ -47,5 +46,4 @@ export const CharacterCard = ({
   );
 };
 
-
-export default CharacterCard
+export default CharacterCard;
