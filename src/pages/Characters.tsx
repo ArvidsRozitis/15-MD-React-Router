@@ -16,10 +16,7 @@ type CharacterType = {
   };
 };
 
-
-
 export const Characters = () => {
-  
   const charactersQuery = useQuery({
     queryKey: ["characters"],
     queryFn: getCharacterData,
@@ -33,14 +30,13 @@ export const Characters = () => {
   if (charactersQuery.isError) {
     return <pre>{charactersQuery.isError}</pre>;
   }
-  
-  console.log(charactersQuery.data)
 
+  console.log(charactersQuery.data);
 
   return (
     <div className="App">
       {charactersQuery.data.map((character: CharacterType) => (
-        <Link key={Math.random()} to={`/characters/${character.id}`}>
+        <Link className="cardlink" key={Math.random()} to={`/characters/${character.id}`}>
           <CharacterCard
             id={character.id}
             image={character.image}
@@ -64,8 +60,8 @@ const getCharacterData = () => {
     .then((res) => res.data.results);
 };
 
-  // const getEpisodeData = () => {
-  //   return axios
-  //     .get("https://rickandmortyapi.com/api/episode/")
-  //     .then(res => res.data);
-  // };
+// const getEpisodeData = () => {
+//   return axios
+//     .get("https://rickandmortyapi.com/api/episode/")
+//     .then(res => res.data);
+// };

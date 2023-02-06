@@ -1,0 +1,22 @@
+body {
+  align-items: center;
+  justify-content: center;
+}
+
+.cardlink {
+  all: unset
+}
+
+.aliveMeter {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: grey;
+
+  &Alive {
+    background-color: greenyellow;
+  }
+  &Dead {
+    background-color: red;
+  }
+}
